@@ -33,10 +33,18 @@
                     <div class="col-sm-4 fw-bold">Địa chỉ:</div>
                     <div class="col-sm-8">@(Model.DiaChi ?? "Chưa cập nhật")</div>
                 </div>
-                <div class="mt-auto">
-                    <a href="/" class="btn btn-secondary">Quay lại</a>
-                    <a asp-action="EditProfile" class="btn btn-primary">Chỉnh sửa hồ sơ</a>
-                    <a asp-controller="KhachHang" asp-action="DangXuat" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                <div class="mt-auto pt-3">
+                    <a href="/" class="btn" style="background-color: #6c757d; color: white !important; border: none; font-weight: 600; padding: 7px 20px;">
+                        <i class="fas fa-arrow-left"></i> Quay lại
+                    </a>
+
+                    <a asp-action="EditProfile" class="btn" style="background-color: #005BAA; color: white !important; border: none; font-weight: 600; padding: 7px 20px;">
+                        <i class="fas fa-user-edit"></i> Chỉnh sửa hồ sơ
+                    </a>
+
+                    <a asp-controller="KhachHang" asp-action="DangXuat" class="btn" style="background-color: #d9534f; color: white !important; border: none; font-weight: 600; padding: 7px 20px;">
+                        <i class="fas fa-sign-out-alt"></i> Đăng xuất
+                    </a>
                 </div>
             </div>
         </div>

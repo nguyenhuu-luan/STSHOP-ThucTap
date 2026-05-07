@@ -44,15 +44,15 @@
 
                             <div class="row g-2 mb-4">
                                 <div class="col-6">
-                                    <a href="/KhachHang/ExternalLogin?provider=Google" class="btn btn-outline-danger w-100 py-2 d-flex align-items-center justify-content-center" style="border-radius: 10px; font-size: 0.9rem;">
-                                        <i class="fab fa-google me-2"></i> Google
+                                    <a href="/KhachHang/ExternalLogin?provider=Google"
+                                           class="btn btn-google-custom w-100 py-2 d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-google me-2"></i> Google
                                     </a>
                                 </div>
                                 <div class="col-6">
                                     <a href="/KhachHang/ExternalLogin?provider=Facebook"
-                                           class="btn btn-outline-primary w-100 py-2 d-flex align-items-center justify-content-center"
-                                           style="border-radius: 10px; font-size: 0.9rem; font-weight: 600; border-color: #1877F2; color: #1877F2;">
-                                        <i class="fab fa-facebook-f me-2"></i> Facebook
+                                           class="btn btn-facebook-custom w-100 py-2 d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-facebook me-2"></i> Facebook
                                     </a>
                                 </div>
                             </div>
@@ -79,3 +79,36 @@
         </div>
     </div>
 </div>
+
+<style>
+    .btn-google-custom {
+        border-radius: 10px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border: 1px solid #dc3545 !important;
+        color: #dc3545 !important; /* Chữ đỏ */
+        background-color: transparent !important;
+        transition: all 0.3s ease;
+    }
+    
+        .btn-google-custom:hover {
+            background-color: #dc3545 !important;
+            color: white !important; /* Di chuột vào chữ trắng nền đỏ */
+        }
+
+    /* Custom nút Facebook */
+    .btn-facebook-custom {
+        border-radius: 10px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border: 1px solid #1877F2; /* Màu xanh chuẩn Facebook */
+        color: #1877F2;
+        background-color: transparent;
+        transition: all 0.3s ease;
+    }
+
+        .btn-facebook-custom:hover {
+            background-color: #1877F2 !important;
+            color: white !important;
+        }
+</style>

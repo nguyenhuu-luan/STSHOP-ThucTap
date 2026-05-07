@@ -12,12 +12,22 @@
                 </a>
             </div>
             <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">@item.TenLoai</div>
+            
             <div class="p-4 border-top border-warning border-start-0 border-end-0 border-bottom-0 rounded-bottom">
-                <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="@item.MaHH"><h4 class="product-title">@item.TenHH</h4></a>      
+                <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="@item.MaHH">
+                    <h4 class="product-title">@item.TenHH</h4>
+                </a>
                 <p class="product-desc">@item.MoTaNgan</p>
-                <div class="d-flex justify-content-between flex-lg-wrap">
-                    <p class="text-dark fs-5 fw-bold mb-0">@item.DonGia vnd</p>
-                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="@item.MaHH" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm vào giỏ</a>
+                
+                <div class="mt-3">
+                    <p class="text-dark fs-5 fw-bold mb-2">
+                        @item.DonGia.ToString("#,##0", new System.Globalization.CultureInfo("vi-VN")) đ
+                    </p>
+                    
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="@item.MaHH"
+                           class="btn border border-secondary rounded-2 px-3 text-primary w-100">
+                        <i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm vào giỏ
+                    </a>
                 </div>
             </div>
         </div>

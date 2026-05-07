@@ -6,7 +6,7 @@
             <div class="bg-light rounded p-4 shadow-sm">
                 <div class="d-flex align-items-center justify-content-between mb-4">
                     <h2 class="mb-0 text-dark fw-bold">
-                        <i class="fas fa-book-medical me-2 text-primary"></i>Thông tin Ebook
+                        <i class="fas fa-book-medical me-2 text-primary"></i>Thông tin sản phẩm
                     </h2>
                     <a asp-action="ManageProducts" class="btn btn-outline-secondary btn-sm rounded-pill">
                         <i class="fas fa-arrow-left me-1"></i> Quay lại
@@ -19,8 +19,8 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-floating mb-3">
-                                <input asp-for="TenHh" class="form-control" placeholder="Tên sách" />
-                                <label>Tên sách / Ebook</label>
+                                <input asp-for="TenHh" class="form-control" placeholder="Tên sản phẩm" />
+                                <label>Tên sản phẩm</label>
                             </div>
                             <div class="form-floating mb-3">
                                 <select asp-for="MaLoai" class="form-select" id="floatingSelect">
@@ -29,7 +29,7 @@
                                         <option value="@loai.MaLoai">@loai.TenLoai</option>
                                     }
                                 </select>
-                                <label for="floatingSelect">Danh mục sách</label>
+                                <label for="floatingSelect">Danh mục sản phẩm</label>
                             </div>
                             <div class="form-floating mb-3">
                                 <input asp-for="DonGia" type="number" class="form-control" placeholder="Giá bán" />

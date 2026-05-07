@@ -5,38 +5,12 @@
 }
 
 <div class="container-fluid py-5">
-    <div class="container py-4">
-        <h2 class="display-6 text-primary mb-4">Thảo luận mới nhất</h2>
-        <div class="row g-4">
-            @foreach (var bv in Model.TopPosts)
-            {
-                <div class="col-lg-4">
-                    <div class="p-4 rounded bg-light border border-primary shadow-sm h-100">
-                        <a asp-action="Details" asp-controller="Forum" asp-route-id="@bv.MaBv" class="h4 text-dark text-decoration-none">@bv.TieuDe</a>
-                        <p class="text-muted mt-3" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                            @bv.NoiDung
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center mt-3">
-                            <small><i class="fas fa-user text-primary me-2"></i>@bv.MaKhNavigation?.HoTen</small>
-                            <small class="text-secondary">@bv.NgayDang?.ToString("dd/MM/yyyy")</small>
-                        </div>
-                    </div>
-                </div>
-            }
-            <div class="row mt-4">
-                <div class="col-12 mt-4">
-                    <a asp-action="Index" asp-controller="Forum" class="fw-bold d-inline-flex align-items-center" style="color: #81bd00; font-size: 1.1rem; transition: 0.3s;">
-                        Xem tất cả thảo luận <i class="fas fa-arrow-right ms-2"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 </div>
 
 <div class="container-fluid vesitable pb-5">
     <div class="container pb-5">
-        <h2 class="display-6 text-primary mb-4">Sản phẩm Ebook nổi bật</h2>
+        <h2 class="display-6 text-primary mb-4">Sản phẩm nổi bật</h2>
         <div class="owl-carousel vegetable-carousel">
             @foreach (var item in Model.FeaturedProducts)
             {
