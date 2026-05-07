@@ -58,18 +58,18 @@
                     </button>
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div class="navbar-nav mx-auto">
-                            <a asp-controller="HangHoa" asp-action="Index" class="nav-item nav-link">Di động</a>                          
+                            <a asp-controller="HangHoa" asp-action="Index" class="nav-item nav-link">Gói cước Data</a>                          
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Internet - Truyền hình</a>
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Điện thoại - Thiết bị</a>
                                 <div class="dropdown-menu m-0 shadow">
-                                    <a href="cart.html" class="dropdown-item">Internet Wifi</a>
-                                    <a href="checkout.html" class="dropdown-item">Internet - Truyền Hình</a>
-                                    <a href="404.html" class="dropdown-item">Internet - Di động</a>
-                                    <a href="checkout.html" class="dropdown-item">Internet - Camera</a>
+                                    <a asp-controller="HangHoa" asp-action="Index" asp-route-loai="9" class="dropdown-item">Điện thoại di động</a>
+                                    <a asp-controller="HangHoa" asp-action="Index" asp-route-loai="10" class="dropdown-item">Ốp lưng điện thoại</a>
+                                    <a asp-controller="HangHoa" asp-action="Index" asp-route-loai="11" class="dropdown-item">Phụ kiện</a>
+                                    <a asp-controller="HangHoa" asp-action="Index" asp-route-loai="12" class="dropdown-item">Router Wifi</a>
                                 </div>
                             </div>
+                           
                             <a href="contact.html" class="nav-item nav-link">Hỗ trợ khách hàng</a>
-                            <a href="contact.html" class="nav-item nav-link">Liên hệ</a>
                             @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
                             {
                                 <a asp-controller="Admin" asp-action="Index" class="nav-item nav-link text-danger fw-bold">
