@@ -125,5 +125,9 @@ namespace EForumKLTN.Controllers
             return Json(suggestions);
         }
         #endregion
+
+        #region Phone
+
+        #endregion
     }
 }

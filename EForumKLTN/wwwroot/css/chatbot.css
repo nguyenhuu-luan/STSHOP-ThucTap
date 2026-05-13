@@ -1,0 +1,150 @@
+﻿
+#chatbot-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    z-index: 9999;
+}
+
+#chatbot-toggle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: #81c408;
+    color: white;
+    font-size: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+#chatbot-box {
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    margin-bottom: 15px;
+    max-height: 80vh;
+}
+
+.chatbot-header {
+    background: #81c408;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#close-chatbot {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+
+.chatbot-body {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: #f8f9fa;
+}
+
+.bot-message,
+.user-message {
+    padding: 10px 14px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.bot-message {
+    background: #e9ecef;
+    color: #333;
+}
+
+.user-message {
+    background: #81c408;
+    color: white;
+    margin-left: auto;
+}
+
+.chatbot-footer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    background: white;
+}
+
+#chatbot-input {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+}
+
+#send-chatbot {
+    margin-left: 10px;
+    border: none;
+    width: 45px;
+    border-radius: 10px;
+    background: #81c408;
+    color: white;
+}
+
+@media (max-width: 576px) {
+
+    #chatbot-widget {
+        right: 15px;
+        bottom: 90px;
+    }
+
+    #chatbot-box {
+        width: 320px;
+        max-width: calc(100vw - 30px);
+        height: 420px;
+        border-radius: 18px;
+    }
+
+    #chatbot-toggle {
+        width: 55px;
+        height: 55px;
+        font-size: 20px;
+    }
+}
+
+.faq-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.faq-btn {
+    width: 100%;
+    border: none;
+    background: white;
+    border: 1px solid #dfe4ea;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    text-align: left;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+    .faq-btn:hover {
+        background: #81c408;
+        color: white;
+        border-color: #81c408;
+    }
+
+.chat-time {
+    font-size: 11px;
+    opacity: 0.6;
+    margin-top: 5px;
+}

@@ -34,6 +34,8 @@ public partial class EForumContext : DbContext
     public virtual DbSet<BinhLuan> BinhLuans { get; set; }
     public DbSet<Coupon> Coupons { get; set; }
 
+    public virtual DbSet<ChatBotFaQ> ChatBotFaQs { get; set; }
+
     //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
     //      => optionsBuilder.UseSqlServer("Data Source=DESKTOP-66DOCVE;Initial Catalog=EForumDB;Integrated Security=True;Encrypt=False;Trust Server Certificate=True");
@@ -180,7 +182,7 @@ public partial class EForumContext : DbContext
 
         modelBuilder.Entity<ChuDe>(entity =>
         {
-            entity.HasKey(e => e.MaCd).HasName("PK_ChuDe"); 
+            entity.HasKey(e => e.MaCd).HasName("PK_ChuDe");
 
             entity.ToTable("ChuDe");
 
@@ -195,7 +197,7 @@ public partial class EForumContext : DbContext
 
         modelBuilder.Entity<BinhLuan>(entity =>
         {
-            entity.HasKey(e => e.MaBl).HasName("PK_BinhLuan"); 
+            entity.HasKey(e => e.MaBl).HasName("PK_BinhLuan");
 
             entity.ToTable("BinhLuan");
 
@@ -224,7 +226,7 @@ public partial class EForumContext : DbContext
             entity.Property(e => e.MaKH_NV)
                 .HasMaxLength(20)
                 .HasColumnName("MaKH_NV");
-      
+
             entity.Property(e => e.NgayTao)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
@@ -235,6 +237,19 @@ public partial class EForumContext : DbContext
                 .HasConstraintName("FK_Coupon_KhachHang");
         });
 
+        modelBuilder.Entity<ChatBotFaQ>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+
+            entity.ToTable("ChatbotFAQ");
+
+            entity.Property(e => e.TieuDe)
+                .HasMaxLength(255);
+
+            entity.Property(e => e.NgayTao)
+                .HasColumnType("datetime")
+                .HasDefaultValueSql("(getdate())");
+        });
 
         OnModelCreatingPartial(modelBuilder);
     }

@@ -5,7 +5,7 @@
     <title>@ViewBag.Title</title>
 
     <meta charset="utf-8">
-    <title>STHUB - Forum & Ecommerce</title>
+    <title>STSHOP - Forum & Ecommerce</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -26,6 +26,7 @@
     <link href="~/css/bootstrap.min.css" rel="stylesheet">
     <link href="~/css/style.css" rel="stylesheet">
     <link href="~/css/custom.css" rel="stylesheet">
+    <link href="~/css/chatbot.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
@@ -52,7 +53,7 @@
             </div>
             <div class="container px-0">
                 <nav class="navbar navbar-light bg-white navbar-expand-xl">
-                    <a asp-controller="Home" asp-action="ShowIndex" class="navbar-brand"><h1 class="text-primary display-6">STHUB</h1></a>
+                    <a asp-controller="Home" asp-action="ShowIndex" class="navbar-brand"><h1 class="text-primary display-6">STSHOP</h1></a>
                     <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="fa fa-bars text-primary"></span>
                     </button>
@@ -70,6 +71,8 @@
                             </div>
                            
                             <a href="contact.html" class="nav-item nav-link">Hỗ trợ khách hàng</a>
+                            <a href="contact.html" class="nav-item nav-link">Liên hệ</a>
+
                             @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
                             {
                                 <a asp-controller="Admin" asp-action="Index" class="nav-item nav-link text-danger fw-bold">
@@ -149,7 +152,7 @@
         @await Html.PartialAsync("_Footer")
     </div>
 
-    <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+        @await Html.PartialAsync("_ChatBot")
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/easing/easing.min.js"></script>
@@ -158,6 +161,7 @@
     <script src="~/lib/owlcarousel/owl.carousel.min.js"></script>
 
     <script src="~/js/main.js"></script>
+    <script src="~/js/chatbot.js"></script>
     @RenderSection("Scripts", required: false)
 
     <script>
